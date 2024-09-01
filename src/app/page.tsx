@@ -1,7 +1,22 @@
-import Image from "next/image";
+import { fetchVehicleTypes } from "./actions";
+import VehicleSelect from "./VehicleSelect";
 
-export default function Home() {
+export type VehicleType = {
+  MakeId: number;
+  MakeName: string;
+  VehicleTypeId: number;
+  VehicleTypeName: string;
+};
+
+
+export default async function Home() {
+ 
+  const vehicleData: VehicleType[] = await fetchVehicleTypes();
+  // const vehicleTypes = console.log(vehicleData);
+
   return (
-   <div>hi</div>
+    <div className="flex gap-4">
+      <VehicleSelect vehicleData={vehicleData} />
+    </div>
   );
 }
