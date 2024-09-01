@@ -12,7 +12,7 @@ Then install required packages by running below commands:
 pnpm install
 ```
 
-To run the project type any of below commands:
+To run the project run below command:
 ```
 pnpm run dev
 ```
