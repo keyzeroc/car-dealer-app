@@ -17,9 +17,9 @@ export default async function Home() {
   const vehicleData: VehicleType[] = await fetchVehicleTypes();
 
   return (
-    <div className="flex h-svh flex-col items-center justify-center gap-[10%]">
-      <h1 className="text-9xl">Welcome to car dealership app</h1>
-      <div className="flex flex-col gap-4 items-center">
+    <div className="flex flex-col items-center justify-center gap-40 min-h-full">
+      <h1 className="text-8xl">Welcome to car dealership app</h1>
+      <div className="flex flex-col items-center gap-4">
         <h2 className="text-2xl">Choose your dream car</h2>
         <Suspense fallback={<p>Loading vehicle data</p>}>
           <VehicleSelect vehicleData={vehicleData} />
