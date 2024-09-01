@@ -1,4 +1,6 @@
-## Simple car dealer App
+## Car dealer App
+
+A simple web app which fetches cars from an API and displays that data
 
 To run locally clone this repository by running below command in terminal (make sure you have git installed):
 ```
